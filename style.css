@@ -1,0 +1,1038 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    color: #252525;
+    background-color: white;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* CORES */
+
+:root {
+    --rosa: rgb(246, 184, 195);
+    --rosa-claro: #fde5e9;
+    --amarelo: #f6df8b;
+    --cinza: #d9d9d9;
+    --cinza-escuro: #555;
+    --preto: #202124;
+    --branco: #ffffff;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* BARRA SUPERIOR */
+
+.topo-aviso {
+    background-color: var(--preto);
+    color: white;
+    text-align: center;
+    padding: 7px;
+    font-size: 13px;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: var(--rosa);
+    border-bottom: 1px solid #e69daa;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-family: "Abril Fatface", Georgia, serif;
+    font-size: 23px;
+    line-height: 1;
+}
+
+.logo span {
+    display: block;
+    font-family: "Times New Roman", serif;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    padding: 9px 11px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover,
+.nav-links a.ativo {
+    background-color: white;
+}
+
+/* BOTÕES */
+
+.btn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    background-color: var(--preto);
+    color: white;
+    padding: 11px 22px;
+    border-radius: 3px;
+    font-family: "Times New Roman", serif;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn-amarelo {
+    background-color: var(--amarelo);
+    color: #252525;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 520px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 45px;
+    align-items: center;
+    padding: 70px 0;
+}
+
+.hero-text small,
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: #777;
+}
+
+.hero h1 {
+    font-family: "Abril Fatface", Georgia, serif;
+    font-size: clamp(45px, 6vw, 85px);
+    line-height: 0.98;
+    margin: 15px 0 22px;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 620px;
+    margin-bottom: 25px;
+}
+
+/* IMAGEM DO COMEÇO */
+
+.hero-img {
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.20);
+}
+
+.hero-img img {
+    width: 100%;
+    height: 390px;
+    object-fit: contain;
+    display: block;
+}
+
+/* PLACEHOLDER DAS FOTOS */
+
+.placeholder {
+    background-color: transparent;
+    color: #666;
+    min-height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+.placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.galeria-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+/* SEÇÕES */
+
+.section {
+    padding: 75px 0;
+}
+
+.section-cinza {
+    background-color: #f2f2f2;
+}
+
+.section-rosa {
+    background-color: var(--rosa-claro);
+}
+
+.section-amarela {
+    background-color: #fff8dc;
+}
+
+.section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.section h2,
+.page-title {
+    font-family: "Abril Fatface", Georgia, serif;
+    font-size: clamp(32px, 4vw, 55px);
+    line-height: 1.05;
+}
+
+.section-head p {
+    max-width: 550px;
+}
+
+/* GRIDS */
+
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.sobre-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+}
+/* CARDS */
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.card h3 {
+    font-family: "Abril Fatface", Georgia, serif;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #555;
+}
+
+/* SETORES */
+
+.setor-card {
+    padding: 25px;
+    min-height: 155px;
+    background-color: white;
+    border-top: 5px solid var(--rosa);
+}
+
+
+.icone {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+/* MULHERES */
+
+.mulher-card .foto {
+    height: 250px;
+    background-color: var(--cinza);
+}
+
+.mulher-card .foto .placeholder {
+    height: 100%;
+    min-height: 0;
+}
+
+/* FRASE */
+
+.quote {
+    padding: 45px;
+    background-color: #fffacd;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.quote p {
+    font-family: "Abril Fatface", Georgia, serif;
+    font-size: clamp(27px, 3vw, 43px);
+    line-height: 1.2;
+}
+
+.quote span {
+    display: block;
+    margin-top: 15px;
+}
+
+/* HISTÓRIA EM DESTAQUE */
+
+.destaque {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    background-color: rgb(246, 184, 195);
+    padding: 25px;
+    align-items: center;
+}
+
+.destaque .imagem {
+    min-height: 360px;
+    background-color: #252525
+}
+
+.destaque .texto {
+    background-color: white;
+    padding: 35px;
+}
+
+.destaque h3 {
+    font-family: "Abril Fatface", Georgia, serif;
+    font-size: 32px;
+    margin: 10px 0 15px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: rgb(246, 184, 195);
+    padding: 4px 10px;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   CARDS DOS SETORES -*/
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.equipe-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.equipe-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.equipe-card .foto {
+    width: 100%;
+    height: 280px;
+    background-color: var(--cinza);
+    overflow: hidden;
+}
+
+
+.equipe-card .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s ease;
+}
+.equipe-card:hover .foto img {
+    transform: scale(1.03);
+}
+
+.equipe-card .card-content {
+    padding: 20px;
+}
+
+.equipe-card h3 {
+    font-family: "Abril Fatface", Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.equipe-card p {
+    color: #555;
+}
+
+.equipe-card strong {
+    color: #252525;
+}
+
+@media (max-width: 900px) {
+    .equipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .equipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .equipe-card .foto {
+        height: 300px;
+    }
+}
+        
+/* SETORES */
+.setores-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    max-width: 100%;
+    margin: 25px 0 0;
+}
+
+.setor-card {
+    background-color: #fff;
+    border: 2px solid #e8a0b8;
+    border-radius: 10px;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.setor-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.setor-card:hover {
+    transform: translateY(-4px);
+    border-color: #d96f91;
+    box-shadow: 0 7px 15px rgba(217, 111, 145, 0.2);
+}
+
+.setor-card h3 {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #333;
+    padding: 7px 4px;
+    margin: 0;
+    line-height: 1.2;
+}
+@media (max-width: 900px) {
+    .setores-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 14px;
+    }
+}
+
+@media (max-width: 650px) {
+    .setores-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .setor-card img {
+        height: 110px;
+    }
+
+    .setor-card h3 {
+        font-size: 14px;
+        padding: 8px 4px;
+    }
+}
+
+/* BANNER DAS PÁGINAS */
+
+.page-banner {
+    background-color: var(--rosa-claro);
+    padding: 65px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-banner p {
+    max-width: 750px;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.sobre-img {
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.sobre-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* METODOLOGIA */
+.lista-etapas {
+    display: grid;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.etapa {
+    border: 2px solid  #fde5e9;
+    border-radius: 12px;
+    background-color: #f6f6f6;
+    padding: 17px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.etapa strong {
+    display: block;
+    font-size: 18px;
+}
+/* HISTÓRIAS */
+
+.historia {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+    padding: 30px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.historia .foto {
+    background-color: var(--cinza);
+    min-height: 270px;
+}
+
+.historia h3 {
+    font-family: "Abril Fatface", Georgia, serif;
+    font-size: 32px;
+    margin: 5px 0 8px;
+}
+
+.info-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.info-item {
+    background-color: #f4f4f4;
+    padding: 13px;
+}
+
+.info-item strong {
+    display: block;
+}
+
+/* FORMULÁRIO */
+
+.formulario {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 35px;
+    border: 1px solid #ddd;
+}
+
+.form-grupo {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    font: 16px "Times New Roman", serif;
+    background-color: white;
+}
+
+textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+/* GALERIA */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.galeria-item {
+    background-color: #fffacd;
+    padding: 10px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.03);
+}
+
+.galeria-item figcaption {
+    text-align: center;
+    padding: 12px 5px 8px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+@media (max-width: 700px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-item img {
+        height: 220px;
+    }
+}
+/* EQUIPE */
+
+.equipe-card .foto {
+    height: 260px;
+    background-color: var(--cinza);
+}
+
+/* RODAPÉ */
+/* =========================
+   RODAPÉ
+========================= */
+
+.footer {
+    background-color: #535353;
+    color: #ffffff;
+    padding: 30px 40px;
+    font-family: sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+/* =========================
+   COLUNA DA ESQUERDA
+========================= */
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    display: block;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #cccccc;
+    margin: 0;
+}
+
+/* =========================
+   REDES SOCIAIS
+========================= */
+
+.footer-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   COLUNA DA DIREITA
+========================= */
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-right h3 {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+}
+
+.footer-right span {
+    font-size: 12px;
+    color: #cccccc;
+}
+
+/* =========================
+   TEXTOS DO RODAPÉ
+========================= */
+
+.footer h3 {
+    margin: 0 0 5px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-left, 
+    .footer-right {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        align-items: flex-start;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+    }
+
+    .hero,
+    .sobre-grid,
+    .destaque {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .historia {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        display: block;
+    }
+
+    .logo {
+        margin-bottom: 12px;
+    }
+
+    .nav-links {
+        gap: 2px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 7px 8px;
+    }
+
+    .hero {
+        padding: 45px 0;
+    }
+
+    .hero-img {
+        min-height: 280px;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .section-head {
+        display: block;
+    }
+
+    .section-head p {
+        margin-top: 15px;
+    }
+
+    .info-list {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario {
+        padding: 22px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        display: block;
+    }
+/* EQUIPE */
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.equipe-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.equipe-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ESPAÇO DA FOTO */
+
+.equipe-card .foto {
+    width: 100%;
+    height: 280px;
+    background-color: var(--cinza);
+    overflow: hidden;
+}
+
+/* IMAGEM */
+
+.equipe-card .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEXTO DO CARD */
+
+.equipe-card .card-content {
+    padding: 20px;
+}
+
+.equipe-card h3 {
+    font-family: "Abril Fatface", Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.equipe-card p {
+    color: #555;
+}
+
+.equipe-card strong {
+    color: #252525;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .equipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .equipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .equipe-card .foto {
+        height: 300px;
+    }
+
+}
+
+.btn-voltar {
+    display: inline-block;
+    background-color: #f6b8c3;
+    color: #252525;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+}
+
+.btn-voltar:hover {
+    background-color: #f0a5b3;
+}
+
+
+}

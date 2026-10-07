@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    color: #252525;
+    background-color: #fde5e9;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --rosa: rgb(246, 184, 195);
+    --rosa-claro: #fde5e9;
+    --cinza-escuro: #555;
+    --preto: #202124;
+    --branco: #ffffff;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: var(--rosa);
+    border-bottom: 1px solid #e69daa;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-family: "Abril Fatface", Georgia, serif;
+    font-size: 23px;
+    line-height: 1;
+}
+
+.logo span {
+    display: block;
+    font-family: "Times New Roman", serif;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    padding: 9px 11px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover,
+.nav-links a.ativo {
+    background-color: white;
+}
+
+/* =========================
+   BANNER DA PÁGINA
+========================= */
+
+.page-banner {
+    text-align: center;
+    padding: 70px 0 50px;
+}
+
+.page-title {
+    font-family: "Abril Fatface", Georgia, serif;
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.page-banner p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 17px;
+}
+
+/* =========================
+   ÁREA DAS HISTÓRIAS
+========================= */
+
+main {
+    padding-bottom: 50px;
+}
+
+.historia {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto 35px;
+    background-color: white;
+    display: flex;
+    align-items: stretch;
+    gap: 35px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   FOTO
+========================= */
+
+.foto {
+    width: 35%;
+    min-height: 350px;
+    flex-shrink: 0;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.texto {
+    flex: 1;
+    padding: 10px 5px;
+}
+
+.texto h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.texto h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+/* =========================
+   BOTÃO VOLTAR
+========================= */
+
+.btn-voltar {
+    display: inline-block;
+    background-color: #d96f91;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(217, 111, 145, 0.25);
+}
+
+.btn-voltar:hover {
+    background-color: #c85d7e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(217, 111, 145, 0.35);
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.footer {
+    width: 100%;
+    background-color: #252525;
+    color: white;
+    padding: 35px 0;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+/* LOGO DO RODAPÉ */
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    display: block;
+}
+
+.footer h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .historia {
+        gap: 25px;
+    }
+
+    .foto {
+        width: 40%;
+    }
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 650px) {
+
+    .page-banner {
+        padding: 45px 0 35px;
+    }
+
+    .page-title {
+        font-size: 32px;
+    }
+
+    .historia {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .foto {
+        width: 100%;
+        height: 300px;
+        min-height: 0;
+    }
+
+    .texto {
+        padding: 0;
+    }
+
+    .texto h2 {
+        font-size: 24px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+
+    .footer-logo {
+        order: -1;
+    }
+
+    .footer-logo img {
+        width: 45px;
+        height: 45px;
+    }
+}
